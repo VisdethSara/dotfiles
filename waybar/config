@@ -1,14 +1,16 @@
 // -*- mode: jsonc -*-
+[
 {
+    "name": "topbar",
+    "position": "top",
     // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
         "mpd",
-        "custom/brightness",
+        "network",
         "custom/media",
 	"custom/vpn",
 	"custom/wireguard"
@@ -20,8 +22,6 @@
     ],
     "modules-right": [
         "pulseaudio",
-        "network",
-        "temperature",
         "keyboard-state",
         "sway/language",
         "battery",
@@ -106,6 +106,7 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+	"format": "{:%H:%M %d/%b/%Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -115,15 +116,7 @@
     },
     "memory": {
         "format": "{}% "
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", ""]
-    },
+    }, 
     "battery": {
         "states": {
             // "good": 95,
@@ -213,11 +206,7 @@
       "*": 4
       }
     },
-    "custom/brightness": {
-    "exec": "$HOME/.config/waybar/brightness_module.sh",
-    "interval": 1,
-    "tooltip": false
-    },
+   
     "custom/vpn": {
     "exec": "~/.config/waybar/vpn_module.sh",
     "interval": 5,
@@ -230,7 +219,29 @@
     "return-type": "json",
     "on-click": "nm-connection-editor"
     }
-  }
-}
+},
+{
+    "name": "leftbar",
+    "position": "left",
+    "width": 30,
 
-//"format-icons": ["", "", "", "", "", "", "", "", ""]
+    "modules-left": [
+	"custom/brightness",
+	"temperature"
+    ],
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": [""]
+    },
+    "custom/brightness": {
+    	"exec": "$HOME/.config/waybar/brightness_module.sh",
+    	"interval": 1,
+    	"tooltip": false
+    }
+}
+]
+

@@ -1,26 +1,48 @@
+* {
+    font-family: JetBrainsMono Nerd Font Mono Regular;
+    font-size: 16px;
+}
 #workspaces button {
-  font-size: 16px;      /* Increase text size */
-  padding: 6px 5px;    /* Bigger clickable area */
+  padding: 2px 2px;
   margin: 4px;
   border-radius: 3px;
   color: #555555;
 }
 
 #workspaces button.active {
-  font-size: 16px;      /* Active workspace slightly bigger */
-  background: #ba03fc;
+  background: #c792ea;
   color: #e1e1e1;
 }
 
 #workspaces {
   margin: 0 3px;
 }
-#waybar .module {
+window#waybar.topbar .module {
     border-left: 1px solid #c792ea;
     border-right: 1px solid #c792ea;
-    border-top: 1px solid #00a4aa;
+    padding: 4px 40px;
     margin: 4px;
-    padding: 6px 10px;
-    border-radius: 6px;
+}
+window#waybar {
+    background: transparent;
 }
 
+window#waybar.topbar .modules-left {
+    border-left: 1px solid #c792ea;
+    border-right: 1px solid #c792ea;
+    border-bottom: 1px solid #00a4aa;
+    border-top: 1px solid #00a4aa;
+    border-radius: 0.375rem;
+    padding: 0.125rem 0.125rem;
+    margin: 0.25rem;
+    background: @theme_main_color;
+}
+
+window#waybar.leftbar .module {
+	border-left: 1px solid #00a4aa;
+	border-right: 1px solid #00a4aa;
+	border-bottom: 1px solid #c792ea;
+	border-top: 1px solid #c792ea;
+	padding: 8px 16px;
+	margin: 4px;
+}
