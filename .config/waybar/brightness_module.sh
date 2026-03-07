@@ -29,5 +29,5 @@ ICON="${ICONS[$INDEX]}"
 
 # Output for Waybar (JSON or plain text)
 # Plain text example:
-echo "$ICON $PERCENT%"
+echo "$PERCENT% $ICON"
 
