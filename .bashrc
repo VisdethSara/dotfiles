@@ -47,14 +47,5 @@ shopt -s cdspell       # fixes minor typos in cd
 shopt -s globstar      # ** recursive globbing
 shopt -s extglob
 
-# ----- colored man pages -----
-export LESS_TERMCAP_mb=$'\e[1;31m'
-export LESS_TERMCAP_md=$'\e[1;36m'
-export LESS_TERMCAP_me=$'\e[0m'
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[1;44;33m'
-export LESS_TERMCAP_ue=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[1;32m'
-
 # ---- prompt ----
 export PS1='\[\e[95m\]\u\e[32m\]@\[\e[94m\]\h\[\e[32m\] \[\e[91m\]>\W<\[\e[0m\]$\[\e[0m\] '
