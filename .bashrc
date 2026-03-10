@@ -7,8 +7,9 @@
 
 export PATH="$HOME/.local/bin:$PATH"
 
-# ---- load ble.sh ----
+# ---- load ble.sh & fzf ----
 [[ -f /usr/share/blesh/ble.sh ]] && source /usr/share/blesh/ble.sh
+source /usr/share/fzf/key-bindings.bash
 
 # ---- aliases ----
 alias c='clear'
