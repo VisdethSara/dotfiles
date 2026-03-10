@@ -32,14 +32,21 @@ alias grep='grep --color=auto'
 
 
 # ---- history settings ----
+# file
 export HISTFILE=~/.bash_history
+
+# large history
 export HISTSIZE=50000
 export HISTFILESIZE=100000
-export HISTCONTROL=ignoredups:erasedups
 
+# ignore Commands starting with a space, or containing secrets
+export HISTCONTROL=ignoredups:erasedups:ignorespace
+export HISTIGNORE='*password*:*passwd*:*secret*:*token*:*key*'
+
+# append, not overwrite
 shopt -s histappend
 
-PROMPT_COMMAND='history -a; history -n; '"$PROMPT_COMMAND"
+PROMPT_COMMAND='history -a; history -n; history -c; history -r; '"$PROMPT_COMMAND"
 
 # ---- useful shopt ----
 shopt -s autocd        # typing a directory name cd's into it
