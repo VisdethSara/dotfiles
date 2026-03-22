@@ -17,7 +17,7 @@ alias rdp='xfreerdp3'
 alias xfreerdp='xfreerdp3'
 alias wbarrel='pkill waybar; hyprctl dispatch exec waybar'
 alias please='sudo $(fc -ln -1)'
-
+alias eza='eza -la'
 # pacman helpers
 alias ins='yay -Syy --answerclean None --answerdiff None --mflags "--noconfirm"'
 alias update='yay -Syu'
