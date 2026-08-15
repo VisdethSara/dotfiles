@@ -5,4 +5,4 @@ configuration {
  }
 //@theme "solarized"
 
-@theme "/usr/share/rofi/themes/sara.rasi"
+@theme "sara.rasi"
