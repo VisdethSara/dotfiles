@@ -1,6 +1,11 @@
 {
   "autoupdate:channel": "latest",
   "telemetry:enabled": false,
+  "term:disablewebgl": true,
+  "window:transparent": true,
+  "window:opacity": 0.85,
+  "term:transparency": 0.85,
+  "window:blur": true,
   "term:fontsize": 16,
   "term:fontfamily": "JetBrainsMono Nerd Font Mono"
 }
